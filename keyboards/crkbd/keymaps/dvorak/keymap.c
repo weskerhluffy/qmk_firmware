@@ -28,10 +28,11 @@ enum crkbd_layers {
 #define RAISE MO(_RAISE)
 #define ESC_CTL LCTL_T(KC_ESC)
 
+// XXX: https://www.slant.co/topics/512/~best-keyboard-layouts-for-programming#8
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DVORAK] = LAYOUT_split_3x6_3( \
   //,-----------------------------------------------.          ,-----------------------------------------------.
-     KC_TAB, KC_QUOT,KC_COMM, KC_DOT, KC_P,   KC_Y,              KC_F,   KC_G,   KC_C,   KC_R,   KC_L,  KC_SLSH,\
+     KC_TAB, KC_DQUO,KC_COMM, KC_DOT, KC_P,   KC_Y,              KC_F,   KC_G,   KC_C,   KC_R,   KC_L,  KC_SLSH,\
   //|-------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-------|
      ESC_CTL, KC_A,   KC_O,   KC_E,   KC_U,   KC_I,              KC_D,   KC_H,   KC_T,   KC_N,   KC_S, KC_MINUS,\
   //|-------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-------|
@@ -44,7 +45,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_LOWER] = LAYOUT_split_3x6_3( \
   //,-----------------------------------------------.          ,-----------------------------------------------.
-     KC_TILD,KC_EXLM, KC_AT, KC_HASH, KC_DLR,KC_PERC,           KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RIGHT,KC_RPRN,\
+     KC_TILD,KC_QUOT, KC_AT, KC_HASH, KC_DLR,KC_PERC,           KC_CIRC,KC_AMPR,KC_ASTR,KC_LPRN,KC_RIGHT,KC_RPRN,\
   //|-------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-------|
      _______,KC_VOLD,KC_VOLU,KC_MPRV,KC_MPLY,KC_MNXT,           _______,KC_LEFT,KC_PLUS,KC_LCBR,KC_RCBR,KC_PIPE,\
   //|-------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-------|
@@ -96,7 +97,7 @@ void oled_render_layer_state(void) {
     oled_write_P(PSTR("Layer: "), false);
     switch (layer_state) {
         case L_BASE:
-            oled_write_ln_P(PSTR("DVORAK"), false);
+            oled_write_ln_P(PSTR("Teclado DVORAK"), false);
             break;
         case L_LOWER:
             oled_write_ln_P(PSTR("Lower"), false);
