@@ -14,6 +14,7 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 */
 
 #include QMK_KEYBOARD_H
@@ -38,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|-------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-------|
      KC_BSPC,KC_COMM, KC_Q,   KC_J,   KC_K,   KC_X,              KC_B,   KC_M,   KC_W,   KC_V,   KC_Z,  KC_ENTER,\
   //|-------+-------+-------+-------+-------+-------|          |-------+-------+-------+-------+-------+-------|
-                                KC_LGUI, LOWER, KC_RALT,   KC_SPC, RAISE, KC_LSFT\
+                                KC_LGUI, LOWER, KC_RALT,   KC_SPC, RAISE, KC_RSFT\
                              //`-----------------------'  `----------------------'
   ),
 
