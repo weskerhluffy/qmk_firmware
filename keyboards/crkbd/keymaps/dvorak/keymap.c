@@ -29,6 +29,7 @@ enum crkbd_layers {
 #define RAISE MO(_RAISE)
 #define ESC_CTL LCTL_T(KC_ESC)
 
+
 // XXX: https://www.slant.co/topics/512/~best-keyboard-layouts-for-programming#8
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_DVORAK] = LAYOUT_split_3x6_3( \
